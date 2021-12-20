@@ -30,4 +30,4 @@ When you get tired of playing, simply type "exit".
 
 This project does not have a license, use on your free will.
 
-[⬆ Voltar ao topo](#nome-do-projeto)<br>
+[⬆ Voltar ao topo](#Rock-Paper-Scissors)<br>
