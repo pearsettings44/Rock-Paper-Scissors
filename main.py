@@ -4,7 +4,7 @@ rpm = ["rock", "paper", "scissors"]
 
 def player_move():
     """
-    Get the player choice.
+    player_move(): Get the player choice.
     None ---> str
     """
     choice = input("rock, paper or scissors? --> ")
@@ -15,7 +15,7 @@ def player_move():
 
 def computer_move():
     """
-    Get the computer choice.
+    computer_move(): Get the computer choice.
     None ---> str
     """
     choice = random.choice(rpm)
@@ -23,8 +23,8 @@ def computer_move():
 
 def decide_winner(player, computer):
     """
-    Get the player choice.
-    str, str ---> str
+    decide_winner(player, computer): decides who the winner is.
+    str, str ---> None
     """
     if player == computer:
          return print(f"Computer played {computer}. IT'S A DRAW!!!")
@@ -38,11 +38,14 @@ def decide_winner(player, computer):
         return print(f"Computer played {computer}. YOU LOST!")
     if player == "paper" and computer == "scissors":
         return print(f"Computer played {computer}. YOU LOST!")
-    if player == "paper" and computer == "rock ":
+    if player == "paper" and computer == "rock":
         return print(f"Computer played {computer}. YOU WON!")
 
 def start_game():
-    """Introduction to the game."""
+    """
+    start_game():Introduction to the game.
+    None ---> None
+    """
     print("########### ROCK PAPERS SCISSORS ###########")
     print("#                                          #")
     print("#            type 'start' to play          #")
@@ -54,7 +57,7 @@ def start_game():
         if flag == "start":
             player = player_move()
             computer = computer_move()
-            print(type(decide_winner(player, computer)))
+            decide_winner(player, computer)
             exit = input("Type 'exit' to exit the game, Enter to continute playing.")
             if exit == "exit":
                 break
@@ -63,7 +66,5 @@ def start_game():
         else:
             print("Please enter a valid argument.")
             flag = input()
-
-
 
 start_game()
